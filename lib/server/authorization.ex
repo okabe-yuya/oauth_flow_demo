@@ -56,7 +56,6 @@ defmodule OauthDemo.Server.Authorization do
 
   def valid_access_token?(user_list, access_token) do
     cond_ = fn user -> Map.get(user, "access_token") == access_token end
-    IO.puts(find_index(user_list, cond_))
     find_index(user_list, cond_) >= 0
   end
 
